@@ -55,7 +55,7 @@ go
 --отпуска (HumanResources.Employee.VacationHours)
 --треба доробити
 -------------------------------------------------------------
-select top 10 * from HumanResources.Employee as e order by e.VacationHours desc
+select  * from HumanResources.Employee as e where e.VacationHours=(select MAX(e1.VacationHours) from HumanResources.Employee as e1)
 
 go
 
